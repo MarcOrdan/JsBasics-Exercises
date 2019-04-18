@@ -1,5 +1,4 @@
 function isLandscape(width, height){
-  return (width>height) ? true : false;
+  return (width>height);
 }
-let Landscape =  isLandscape(40,50);
-console.log(Landscape);
+console.log(isLandscape(100,50));
