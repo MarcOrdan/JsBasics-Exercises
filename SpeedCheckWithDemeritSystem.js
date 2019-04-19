@@ -3,7 +3,7 @@
 //if points > 12 => return Licensed suspended
 
 //use math.floor
-checkSpeed(130);
+checkSpeed(20);
 
 function checkSpeed(speed){
    const speedLimit = 70;
@@ -11,14 +11,15 @@ function checkSpeed(speed){
 
   if (speed < speedLimit + kmPerPoint)  {
     console.log('Ok');
-  } else {
-      const testForPoints = Math.floor((speed-speedLimit)/kmPerPoint)
-      if (testForPoints >= 12){
-           console.log('LICENSED SUSPENDED');
-      } else {
-            console.log('Point(s):', testForPoints) ;
-            }
+    return; 
+  }
+  const testForPoints = Math.floor((speed-speedLimit)/kmPerPoint)
+    if (testForPoints >= 12)
+      console.log('LICENSED SUSPENDED');
+    else 
+       console.log('Point(s):', testForPoints) ;
+            
 
   }
 
-}
+
